@@ -1,0 +1,5 @@
+2024-05-31 07:40:17.528 -04 [4928] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-05-31 07:40:17.528 -04 [5164] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-05-31 07:40:17.544 -04 [7412] LOG:  apagando
+2024-05-31 07:40:17.552 -04 [7412] LOG:  empezando checkpoint: shutdown immediate
+2024-05-31 07:40:17.567 -04 [7412] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.001 s, total=0.023 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/4061C10, redo lsn=0/4061C10

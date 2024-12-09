@@ -1,0 +1,7 @@
+2024-09-24 20:30:21.798 -04 [9176] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-09-19 20:07:36 -04
+2024-09-24 20:30:23.736 -04 [9176] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-09-24 20:30:23.744 -04 [9176] LOG:  redo comienza en 0/45DC390
+2024-09-24 20:30:23.744 -04 [9176] LOG:  largo de registro no válido en 0/45DC478: se esperaba al menos 24, se obtuvo 0
+2024-09-24 20:30:23.744 -04 [9176] LOG:  redo listo en 0/45DC440 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-09-24 20:30:23.753 -04 [9152] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-09-24 20:30:23.759 -04 [9152] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.009 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=0/45DC478, lsn de redo=0/45DC478

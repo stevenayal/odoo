@@ -1,0 +1,8 @@
+2024-08-12 20:20:46.016 -04 [7600] LOG:  el sistema de bases de datos fue apagado en 2024-08-12 20:20:13 -04
+2024-08-12 20:25:45.992 -04 [7580] LOG:  empezando checkpoint: time
+2024-08-12 20:25:46.000 -04 [7580] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/4062C98, redo lsn=0/4062C60
+2024-08-12 20:34:41.087 -04 [7720] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-12 20:34:41.087 -04 [7712] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-12 20:34:41.091 -04 [7580] LOG:  apagando
+2024-08-12 20:34:41.092 -04 [7580] LOG:  empezando checkpoint: shutdown immediate
+2024-08-12 20:34:41.096 -04 [7580] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.006 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/4062D48, redo lsn=0/4062D48

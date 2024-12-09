@@ -1,0 +1,27 @@
+2024-11-17 00:07:50.051 -03 [6208] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-11-14 19:59:49 -03
+2024-11-17 00:07:51.821 -03 [6208] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-11-17 00:07:51.826 -03 [6208] LOG:  redo comienza en 0/45DD780
+2024-11-17 00:07:51.826 -03 [6208] LOG:  largo de registro no válido en 0/45DD868: se esperaba al menos 24, se obtuvo 0
+2024-11-17 00:07:51.826 -03 [6208] LOG:  redo listo en 0/45DD830 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-11-17 00:07:51.836 -03 [6524] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-11-17 00:07:51.843 -03 [6524] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.011 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=0/45DD868, lsn de redo=0/45DD868
+2024-11-21 19:09:42.024 -03 [10704] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-11-21 19:09:42.024 -03 [10704] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2024-11-21 19:09:42.065 -03 [19172] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-11-21 19:09:42.065 -03 [19172] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 115: «host    all             all             127.0.0.1/32            scram-sha-256»
+2024-11-21 19:09:42.105 -03 [16932] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-11-21 19:09:42.105 -03 [16932] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2024-11-21 19:09:42.144 -03 [19016] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-11-21 19:09:42.144 -03 [19016] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/16/data/pg_hba.conf» línea 115: «host    all             all             127.0.0.1/32            scram-sha-256»
+2024-11-21 19:56:38.391 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-21 19:56:38.961 -03 [6524] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.557 s, sync=0.003 s, total=0.586 s; archivos sincronizados=6, más largo=0.001 s, promedio=0.001 s; distancia=4 kB, estimación=4 kB; lsn=0/45DEAD8, lsn de redo=0/45DEAA0
+2024-11-21 20:41:39.063 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-21 20:46:09.480 -03 [6524] LOG:  checkpoint completo: escritos 3125 búfers (19.1%); 0 archivos WAL añadidos, 0 eliminados, 2 reciclados; write=270.026 s, sync=0.377 s, total=270.417 s; archivos sincronizados=958, más largo=0.012 s, promedio=0.001 s; distancia=28209 kB, estimación=28209 kB; lsn=0/616B260, lsn de redo=0/616B228
+2024-11-21 20:51:39.518 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-21 20:52:10.088 -03 [6524] LOG:  checkpoint completo: escritos 279 búfers (1.7%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=30.521 s, sync=0.034 s, total=30.571 s; archivos sincronizados=61, más largo=0.011 s, promedio=0.001 s; distancia=2344 kB, estimación=25623 kB; lsn=0/63B5510, lsn de redo=0/63B54D8
+2024-11-23 19:59:14.302 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-23 19:59:14.861 -03 [6524] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.540 s, sync=0.011 s, total=0.560 s; archivos sincronizados=6, más largo=0.006 s, promedio=0.002 s; distancia=7 kB, estimación=23061 kB; lsn=0/63B73F0, lsn de redo=0/63B73B8
+2024-11-23 20:04:14.865 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-23 20:04:16.114 -03 [6524] LOG:  checkpoint completo: escritos 12 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.226 s, sync=0.017 s, total=1.249 s; archivos sincronizados=10, más largo=0.012 s, promedio=0.002 s; distancia=14 kB, estimación=20757 kB; lsn=0/63BACD8, lsn de redo=0/63BACA0
+2024-11-23 23:18:58.559 -03 [6524] LOG:  empezando checkpoint: time
+2024-11-23 23:18:59.555 -03 [6524] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.984 s, sync=0.006 s, total=0.996 s; archivos sincronizados=10, más largo=0.001 s, promedio=0.001 s; distancia=9 kB, estimación=18682 kB; lsn=0/63BD200, lsn de redo=0/63BD1C8

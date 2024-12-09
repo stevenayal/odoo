@@ -1,0 +1,5 @@
+2024-08-11 02:57:19.732 -04 [7320] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-11 02:57:19.732 -04 [7312] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-11 02:57:19.744 -04 [7184] LOG:  apagando
+2024-08-11 02:57:19.747 -04 [7184] LOG:  empezando checkpoint: shutdown immediate
+2024-08-11 02:57:19.757 -04 [7184] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.013 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/4062378, redo lsn=0/4062378

@@ -1,0 +1,7 @@
+2024-05-26 15:22:20.902 -04 [6844] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-05-26 14:51:31 -04
+2024-05-26 15:22:21.688 -04 [6844] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-05-26 15:22:21.692 -04 [6844] LOG:  redo comienza en 0/4061950
+2024-05-26 15:22:21.692 -04 [6844] LOG:  largo de registro no válido en 0/4061A38: se esperaba al menos 24, se obtuvo 0
+2024-05-26 15:22:21.692 -04 [6844] LOG:  redo listo en 0/4061A00 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-05-26 15:22:21.697 -04 [6360] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-05-26 15:22:21.702 -04 [6360] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.007 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/4061A38, redo lsn=0/4061A38

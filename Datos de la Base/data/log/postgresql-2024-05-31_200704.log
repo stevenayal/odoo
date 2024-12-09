@@ -1,0 +1,7 @@
+2024-05-31 20:07:04.408 -04 [8108] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-05-31 19:57:44 -04
+2024-05-31 20:07:05.115 -04 [8108] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-05-31 20:07:05.121 -04 [8108] LOG:  redo comienza en 0/4061D70
+2024-05-31 20:07:05.121 -04 [8108] LOG:  largo de registro no válido en 0/4061E58: se esperaba al menos 24, se obtuvo 0
+2024-05-31 20:07:05.121 -04 [8108] LOG:  redo listo en 0/4061E20 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-05-31 20:07:05.131 -04 [8092] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-05-31 20:07:05.140 -04 [8092] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.011 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/4061E58, redo lsn=0/4061E58

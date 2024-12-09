@@ -1,0 +1,35 @@
+2024-09-09 18:38:36.646 -04 [29576] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:38:36.646 -04 [29576] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:38:57.608 -04 [20328] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:38:57.608 -04 [20328] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:38:59.592 -04 [2028] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:38:59.592 -04 [2028] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:39:05.036 -04 [27004] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:39:05.036 -04 [27004] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:46:52.003 -04 [7752] FATAL:  la autentificación password falló para el usuario «root»
+2024-09-09 18:46:52.003 -04 [7752] DETALLE:  No existe el rol «root».
+	Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:46:58.817 -04 [14120] FATAL:  la autentificación password falló para el usuario «root»
+2024-09-09 18:46:58.817 -04 [14120] DETALLE:  No existe el rol «root».
+	Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:47:03.977 -04 [23424] FATAL:  la autentificación password falló para el usuario «root»
+2024-09-09 18:47:03.977 -04 [23424] DETALLE:  No existe el rol «root».
+	Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:47:30.798 -04 [21396] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:47:30.798 -04 [21396] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:47:36.292 -04 [17420] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:47:36.292 -04 [17420] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:48:15.553 -04 [31636] FATAL:  la autentificación password falló para el usuario «root»
+2024-09-09 18:48:15.553 -04 [31636] DETALLE:  No existe el rol «root».
+	Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:48:20.181 -04 [27672] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:48:20.181 -04 [27672] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:48:23.904 -04 [32684] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:48:23.904 -04 [32684] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-09-09 18:54:09.976 -04 [11664] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-09-09 18:54:09.976 -04 [11664] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2024-09-09 18:59:31.154 -04 [11036] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-09-09 18:59:31.154 -04 [11024] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-09-09 18:59:31.159 -04 [10752] LOG:  apagando
+2024-09-09 18:59:31.161 -04 [10752] LOG:  empezando checkpoint: shutdown immediate
+2024-09-09 18:59:31.167 -04 [10752] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.008 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/40635F0, redo lsn=0/40635F0

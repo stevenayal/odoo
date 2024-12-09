@@ -1,0 +1,401 @@
+2024-04-08 18:49:41.429 -04 [23812] LOG:  el sistema de bases de datos fue apagado en 2024-04-08 18:49:34 -04
+2024-04-08 18:54:41.435 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 18:54:48.709 -04 [28820] LOG:  checkpoint complete: wrote 75 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.254 s, sync=0.015 s, total=7.276 s; sync files=32, longest=0.001 s, average=0.001 s; distance=409 kB, estimate=409 kB; lsn=0/15D9DF8, redo lsn=0/15D9DC0
+2024-04-08 18:59:41.710 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 18:59:42.348 -04 [28820] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.605 s, sync=0.016 s, total=0.639 s; sync files=7, longest=0.012 s, average=0.003 s; distance=9 kB, estimate=369 kB; lsn=0/15DC358, redo lsn=0/15DC320
+2024-04-08 19:09:41.350 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:09:45.119 -04 [28820] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.724 s, sync=0.029 s, total=3.769 s; sync files=34, longest=0.012 s, average=0.001 s; distance=144 kB, estimate=347 kB; lsn=0/1600528, redo lsn=0/16004F0
+2024-04-08 19:14:41.121 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:16:19.428 -04 [28820] LOG:  checkpoint complete: wrote 976 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=98.189 s, sync=0.102 s, total=98.307 s; sync files=303, longest=0.011 s, average=0.001 s; distance=4563 kB, estimate=4563 kB; lsn=0/1A75270, redo lsn=0/1A75238
+2024-04-08 19:19:41.437 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:22:56.732 -04 [28820] LOG:  checkpoint complete: wrote 1942 buffers (11.9%); 0 WAL file(s) added, 0 removed, 1 recycled; write=195.070 s, sync=0.204 s, total=195.296 s; sync files=596, longest=0.011 s, average=0.001 s; distance=9122 kB, estimate=9122 kB; lsn=0/23605D0, redo lsn=0/235DCE0
+2024-04-08 19:22:59.431 -04 [23520] ERROR:  la restricción de llave foránea «persona_id_ciudad_fkey» no puede ser implementada
+2024-04-08 19:22:59.431 -04 [23520] DETALLE:  Las columnas llave «id_ciudad» y «id_ciudad» son de tipos incompatibles: character varying y integer
+2024-04-08 19:22:59.431 -04 [23520] SENTENCIA:  ALTER TABLE "persona" ADD FOREIGN KEY ("id_ciudad") REFERENCES "ciudad" ("id_ciudad");
+2024-04-08 19:24:41.752 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:24:50.868 -04 [28820] LOG:  checkpoint complete: wrote 91 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.053 s, sync=0.046 s, total=9.116 s; sync files=96, longest=0.011 s, average=0.001 s; distance=493 kB, estimate=8259 kB; lsn=0/23D94C8, redo lsn=0/23D9490
+2024-04-08 19:27:57.655 -04 [22628] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «cliente»
+2024-04-08 19:27:57.655 -04 [22628] SENTENCIA:  ALTER TABLE "ciudad" ADD FOREIGN KEY ("id_ciudad") REFERENCES "cliente" ("id_ciudad");
+2024-04-08 19:27:57.660 -04 [22628] ERROR:  la restricción de llave foránea «ciudad_id_departamento_fkey» no puede ser implementada
+2024-04-08 19:27:57.660 -04 [22628] DETALLE:  Las columnas llave «id_departamento» y «id_departamento» son de tipos incompatibles: character varying y integer
+2024-04-08 19:27:57.660 -04 [22628] SENTENCIA:  ALTER TABLE "ciudad" ADD FOREIGN KEY ("id_departamento") REFERENCES "departamento" ("id_departamento");
+2024-04-08 19:27:57.676 -04 [22628] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «venta_detalle»
+2024-04-08 19:27:57.676 -04 [22628] SENTENCIA:  ALTER TABLE "cobro_clientes" ADD FOREIGN KEY ("id_venta") REFERENCES "venta_detalle" ("id_venta");
+2024-04-08 19:27:57.680 -04 [22628] ERROR:  la restricción de llave foránea «ventas_cabecera_id_forma_pago_fkey» no puede ser implementada
+2024-04-08 19:27:57.680 -04 [22628] DETALLE:  Las columnas llave «id_forma_pago» y «id_forma_pago» son de tipos incompatibles: character varying y integer
+2024-04-08 19:27:57.680 -04 [22628] SENTENCIA:  ALTER TABLE "ventas_cabecera" ADD FOREIGN KEY ("id_forma_pago") REFERENCES "forma_pago" ("id_forma_pago");
+2024-04-08 19:27:57.691 -04 [22628] ERROR:  la restricción de llave foránea «proveedores_id_tipo_documento_fkey» no puede ser implementada
+2024-04-08 19:27:57.691 -04 [22628] DETALLE:  Las columnas llave «id_tipo_documento» y «id_tipo_documento» son de tipos incompatibles: character varying y integer
+2024-04-08 19:27:57.691 -04 [22628] SENTENCIA:  ALTER TABLE "proveedores" ADD FOREIGN KEY ("id_tipo_documento") REFERENCES "tipo_documento" ("id_tipo_documento");
+2024-04-08 19:29:41.411 -04 [8300] ERROR:  no existe el tipo «datetime» en carácter 111
+2024-04-08 19:29:41.411 -04 [8300] SENTENCIA:  CREATE TABLE "consultas" (  "id_consulta" varchar PRIMARY KEY,  "id_tipo_consulta" varchar,  "fecha_consulta" datetime,  "id_empleado" varchar,  "id_mascota" varchar,  "observacion" varchar);
+2024-04-08 19:29:41.436 -04 [8300] ERROR:  no existe el tipo «datetime» en carácter 116
+2024-04-08 19:29:41.436 -04 [8300] SENTENCIA:  CREATE TABLE "cita" (  "id_cita" integer PRIMARY KEY,  "observacion" varchar,  "id_mascota" integer,  "fecha_cita" datetime,  "id_empleado" integer,  "fecha" date);
+2024-04-08 19:29:41.454 -04 [8300] ERROR:  la restricción de llave foránea «mascotas_id_raza_fkey» no puede ser implementada
+2024-04-08 19:29:41.454 -04 [8300] DETALLE:  Las columnas llave «id_raza» y «id_raza» son de tipos incompatibles: character varying y integer
+2024-04-08 19:29:41.454 -04 [8300] SENTENCIA:  ALTER TABLE "mascotas" ADD FOREIGN KEY ("id_raza") REFERENCES "razas" ("id_raza");
+2024-04-08 19:29:41.463 -04 [8300] ERROR:  no existe la relación «consultas»
+2024-04-08 19:29:41.463 -04 [8300] SENTENCIA:  ALTER TABLE "consultas" ADD FOREIGN KEY ("id_tipo_consulta") REFERENCES "tipo_consulta" ("id_tipo_consulta");
+2024-04-08 19:29:41.474 -04 [8300] ERROR:  la restricción de llave foránea «tratamientos_id_empleado_fkey» no puede ser implementada
+2024-04-08 19:29:41.474 -04 [8300] DETALLE:  Las columnas llave «id_empleado» y «id_empleado» son de tipos incompatibles: integer y character varying
+2024-04-08 19:29:41.474 -04 [8300] SENTENCIA:  ALTER TABLE "tratamientos" ADD FOREIGN KEY ("id_empleado") REFERENCES "empleado" ("id_empleado");
+2024-04-08 19:29:41.483 -04 [8300] ERROR:  la restricción de llave foránea «tratamientos_id_mascota_fkey» no puede ser implementada
+2024-04-08 19:29:41.483 -04 [8300] DETALLE:  Las columnas llave «id_mascota» y «id_mascota» son de tipos incompatibles: integer y character varying
+2024-04-08 19:29:41.483 -04 [8300] SENTENCIA:  ALTER TABLE "tratamientos" ADD FOREIGN KEY ("id_mascota") REFERENCES "mascotas" ("id_mascota");
+2024-04-08 19:29:41.494 -04 [8300] ERROR:  no existe la relación «consultas»
+2024-04-08 19:29:41.494 -04 [8300] SENTENCIA:  ALTER TABLE "tratamientos" ADD FOREIGN KEY ("id_consulta") REFERENCES "consultas" ("id_consulta");
+2024-04-08 19:29:41.496 -04 [8300] ERROR:  no existe la relación «consultas»
+2024-04-08 19:29:41.496 -04 [8300] SENTENCIA:  ALTER TABLE "consultas" ADD FOREIGN KEY ("id_mascota") REFERENCES "mascotas" ("id_mascota");
+2024-04-08 19:29:41.499 -04 [8300] ERROR:  no existe la relación «cita»
+2024-04-08 19:29:41.499 -04 [8300] SENTENCIA:  ALTER TABLE "cita" ADD FOREIGN KEY ("id_mascota") REFERENCES "mascotas" ("id_mascota");
+2024-04-08 19:29:41.501 -04 [8300] ERROR:  no existe la relación «cita»
+2024-04-08 19:29:41.501 -04 [8300] SENTENCIA:  ALTER TABLE "empleado" ADD FOREIGN KEY ("id_empleado") REFERENCES "cita" ("id_empleado");
+2024-04-08 19:29:41.870 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:29:57.808 -04 [28820] LOG:  checkpoint complete: wrote 159 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=15.858 s, sync=0.065 s, total=15.939 s; sync files=174, longest=0.011 s, average=0.001 s; distance=846 kB, estimate=7518 kB; lsn=0/24ACD10, redo lsn=0/24ACCA0
+2024-04-08 19:46:03.298 -04 [23848] ERROR:  no se puede eliminar tabla alumno porque otros objetos dependen de él
+2024-04-08 19:46:03.298 -04 [23848] DETALLE:  restricción «alumno_actividad_id_alumno_fkey» en tabla alumno_actividad depende de tabla alumno
+	restricción «alumno_materia_id_alumno_fkey» en tabla alumno_materia depende de tabla alumno
+2024-04-08 19:46:03.298 -04 [23848] HINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+2024-04-08 19:46:03.298 -04 [23848] SENTENCIA:  DROP TABLE IF EXISTS public.alumno;
+2024-04-08 19:46:32.136 -04 [26520] ERROR:  error de sintaxis en o cerca de «all» en carácter 6
+2024-04-08 19:46:32.136 -04 [26520] SENTENCIA:  drop all tables
+2024-04-08 19:47:44.836 -04 [26520] ERROR:  error de sintaxis en o cerca de «"DROP TABLE IF EXISTS ""alumno_materia"" CASCADE;"» en carácter 1
+2024-04-08 19:47:44.836 -04 [26520] SENTENCIA:  "DROP TABLE IF EXISTS ""alumno_materia"" CASCADE;"
+	"DROP TABLE IF EXISTS ""tipo_documento"" CASCADE;"
+	"DROP TABLE IF EXISTS ""actividad_extracurricular"" CASCADE;"
+	"DROP TABLE IF EXISTS ""alumno_actividad"" CASCADE;"
+	"DROP TABLE IF EXISTS ""materia_profesor"" CASCADE;"
+	"DROP TABLE IF EXISTS ""curso"" CASCADE;"
+	"DROP TABLE IF EXISTS ""alumno"" CASCADE;"
+	"DROP TABLE IF EXISTS ""ciudad"" CASCADE;"
+	"DROP TABLE IF EXISTS ""persona"" CASCADE;"
+	"DROP TABLE IF EXISTS ""area"" CASCADE;"
+	"DROP TABLE IF EXISTS ""materia"" CASCADE;"
+	"DROP TABLE IF EXISTS ""calificacion"" CASCADE;"
+	"DROP TABLE IF EXISTS ""enfasis"" CASCADE;"
+	"DROP TABLE IF EXISTS ""profesor"" CASCADE;"
+	"DROP TABLE IF EXISTS ""aula"" CASCADE;"
+2024-04-08 19:48:18.639 -04 [26520] FATAL:  terminando la conexión debido a una orden del administrador
+2024-04-08 19:48:18.639 -04 [23520] FATAL:  terminando la conexión debido a una orden del administrador
+2024-04-08 19:48:18.640 -04 [19164] FATAL:  terminando la conexión debido a una orden del administrador
+2024-04-08 19:48:18.751 -04 [28820] LOG:  empezando checkpoint: immediate force wait
+2024-04-08 19:48:18.764 -04 [28820] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.013 s; sync files=7, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=6766 kB; lsn=0/24AD3C0, redo lsn=0/24AD388
+2024-04-08 19:48:38.419 -04 [28820] LOG:  empezando checkpoint: immediate force wait
+2024-04-08 19:48:38.430 -04 [28820] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.011 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4562 kB, estimate=6546 kB; lsn=0/2921EA8, redo lsn=0/2921E70
+2024-04-08 19:49:06.464 -04 [13756] ERROR:  no existe la relación «materia»
+2024-04-08 19:49:06.464 -04 [13756] SENTENCIA:  CREATE TABLE "materia_profesor" (
+	  "id_profesor" integer,
+	  "id_materia" integer,
+	  "id_aula" integer,
+	  "periodo" varchar,
+	  PRIMARY KEY ("id_profesor", "id_materia"),
+	  FOREIGN KEY ("id_profesor") REFERENCES "profesor" ("id_profesor"),
+	  FOREIGN KEY ("id_materia") REFERENCES "materia" ("id_materia"),
+	  FOREIGN KEY ("id_aula") REFERENCES "aula" ("id_aula")
+	);
+2024-04-08 19:49:06.477 -04 [13756] ERROR:  no existe la relación «area»
+2024-04-08 19:49:06.477 -04 [13756] SENTENCIA:  CREATE TABLE "materia" (
+	  "id_materia" integer PRIMARY KEY,
+	  "descripcion" varchar,
+	  "id_area" integer,
+	  FOREIGN KEY ("id_area") REFERENCES "area" ("id_area")
+	);
+2024-04-08 19:49:06.554 -04 [13756] ERROR:  no existe la relación «materia»
+2024-04-08 19:49:06.554 -04 [13756] SENTENCIA:  CREATE TABLE "alumno_materia" (
+	  "id_alumno" integer,
+	  "id_materia" integer,
+	  "id_calificacion" integer,
+	  PRIMARY KEY ("id_alumno", "id_materia"),
+	  FOREIGN KEY ("id_alumno") REFERENCES "alumno" ("id_alumno"),
+	  FOREIGN KEY ("id_materia") REFERENCES "materia" ("id_materia"),
+	  FOREIGN KEY ("id_calificacion") REFERENCES "calificacion" ("id_calificacion")
+	);
+2024-04-08 19:49:06.572 -04 [13756] ERROR:  no existe la relación «ciudad»
+2024-04-08 19:49:06.572 -04 [13756] SENTENCIA:  CREATE TABLE "persona" (
+	  "id_persona" integer PRIMARY KEY,
+	  "nombre" varchar,
+	  "apellido" varchar,
+	  "nro_documento" integer,
+	  "id_tipo_doc" integer,
+	  "sexo" varchar,
+	  "fecha_nac" date,
+	  "contacto" varchar,
+	  "correo_electronico" varchar,
+	  "direccion" varchar,
+	  "id_ciudad" integer,
+	  FOREIGN KEY ("id_ciudad") REFERENCES "ciudad" ("id_ciudad"),
+	  FOREIGN KEY ("id_tipo_doc") REFERENCES "tipo_documento" ("id_tipo_doc")
+	);
+2024-04-08 19:49:06.642 -04 [13756] ERROR:  no existe la relación «persona»
+2024-04-08 19:49:06.642 -04 [13756] SENTENCIA:  ALTER TABLE "profesor" ADD FOREIGN KEY ("id_persona") REFERENCES "persona" ("id_persona");
+2024-04-08 19:49:06.645 -04 [13756] ERROR:  no existe la relación «persona»
+2024-04-08 19:49:06.645 -04 [13756] SENTENCIA:  ALTER TABLE "alumno" ADD FOREIGN KEY ("id_persona") REFERENCES "persona" ("idpersona");
+2024-04-08 19:49:06.656 -04 [13756] ERROR:  no existe la relación «alumno_materia»
+2024-04-08 19:49:06.656 -04 [13756] SENTENCIA:  ALTER TABLE "alumno_materia" ADD FOREIGN KEY ("id_calificacion") REFERENCES "calificacion" ("id_calificacion");
+2024-04-08 19:49:06.660 -04 [13756] ERROR:  no existe la relación «alumno_materia»
+2024-04-08 19:49:06.660 -04 [13756] SENTENCIA:  ALTER TABLE "alumno_materia" ADD FOREIGN KEY ("id_alumno") REFERENCES "alumno" ("id_alumno");
+2024-04-08 19:49:09.310 -04 [13756] ERROR:  no existe la relación «alumno_materia»
+2024-04-08 19:49:09.310 -04 [13756] SENTENCIA:  ALTER TABLE "alumno_materia" ADD FOREIGN KEY ("id_materia") REFERENCES "materia" ("id_materia");
+2024-04-08 19:53:38.445 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 19:55:17.731 -04 [28820] LOG:  checkpoint complete: wrote 989 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=99.118 s, sync=0.147 s, total=99.286 s; sync files=354, longest=0.011 s, average=0.001 s; distance=4788 kB, estimate=6370 kB; lsn=0/2DCF0E8, redo lsn=0/2DCF0B0
+2024-04-08 20:02:49.240 -04 [13756] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:03:38.740 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:03:43.093 -04 [28820] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.325 s, sync=0.018 s, total=4.353 s; sync files=16, longest=0.011 s, average=0.002 s; distance=310 kB, estimate=5764 kB; lsn=0/2E1C8E8, redo lsn=0/2E1C8B0
+2024-04-08 20:18:38.096 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:18:45.590 -04 [28820] LOG:  checkpoint complete: wrote 75 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.440 s, sync=0.039 s, total=7.495 s; sync files=90, longest=0.011 s, average=0.001 s; distance=518 kB, estimate=5239 kB; lsn=0/2E9E260, redo lsn=0/2E9E228
+2024-04-08 20:23:38.591 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:23:39.535 -04 [28820] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.914 s, sync=0.014 s, total=0.945 s; sync files=8, longest=0.011 s, average=0.002 s; distance=69 kB, estimate=4722 kB; lsn=0/2EAF848, redo lsn=0/2EAF810
+2024-04-08 20:26:40.305 -04 [27912] ERROR:  no existe la relación «razas»
+2024-04-08 20:26:40.305 -04 [27912] SENTENCIA:  CREATE TABLE mascotas (
+	  id_mascota varchar PRIMARY KEY,
+	  id_propietario varchar,
+	  id_raza integer,
+	  nombre_mascota varchar,
+	  fecha_nacimiento date,
+	  FOREIGN KEY (id_propietario) REFERENCES propietarios(id_propietario),
+	  FOREIGN KEY (id_raza) REFERENCES razas(id_raza)
+	);
+2024-04-08 20:26:40.382 -04 [27912] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:26:40.382 -04 [27912] SENTENCIA:  CREATE TABLE consultas (
+	  id_consulta varchar PRIMARY KEY,
+	  id_tipo_consulta varchar,
+	  fecha_consulta timestamp,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  observacion varchar,
+	  FOREIGN KEY (id_tipo_consulta) REFERENCES tipo_consulta(id_tipo_consulta),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota)
+	);
+2024-04-08 20:26:40.449 -04 [27912] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:26:40.449 -04 [27912] SENTENCIA:  CREATE TABLE tratamientos (
+	  id_tratamiento integer PRIMARY KEY,
+	  duracion varchar,
+	  id_tipo_tratamiento integer,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  id_consulta varchar,
+	  observacion integer,
+	  FOREIGN KEY (id_tipo_tratamiento) REFERENCES tipo_tratamiento(id_tipo_tratamiento),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_consulta) REFERENCES consultas(id_consulta)
+	);
+2024-04-08 20:27:00.302 -04 [27912] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:27:00.302 -04 [27912] SENTENCIA:  CREATE TABLE cita (
+	  id_cita integer PRIMARY KEY,
+	  observacion varchar,
+	  id_mascota varchar,
+	  fecha_cita timestamp,
+	  id_empleado integer,
+	  fecha date,
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
+	);
+2024-04-08 20:28:38.545 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:28:48.482 -04 [28820] LOG:  checkpoint complete: wrote 99 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=9.887 s, sync=0.038 s, total=9.937 s; sync files=95, longest=0.011 s, average=0.001 s; distance=739 kB, estimate=4324 kB; lsn=0/2F687D8, redo lsn=0/2F687A0
+2024-04-08 20:33:38.484 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:33:43.246 -04 [28820] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.724 s, sync=0.017 s, total=4.763 s; sync files=17, longest=0.011 s, average=0.001 s; distance=275 kB, estimate=3919 kB; lsn=0/2FAD510, redo lsn=0/2FAD4D8
+2024-04-08 20:35:50.892 -04 [28152] ERROR:  no existe la relación «razas»
+2024-04-08 20:35:50.892 -04 [28152] SENTENCIA:  CREATE TABLE mascotas (
+	  id_mascota varchar PRIMARY KEY,
+	  id_propietario varchar,
+	  id_raza integer,
+	  nombre_mascota varchar,
+	  fecha_nacimiento date,
+	  FOREIGN KEY (id_propietario) REFERENCES propietarios(id_propietario),
+	  FOREIGN KEY (id_raza) REFERENCES razas(id_raza)
+	);
+2024-04-08 20:35:50.978 -04 [28152] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:35:50.978 -04 [28152] SENTENCIA:  CREATE TABLE consultas (
+	  id_consulta varchar PRIMARY KEY,
+	  id_tipo_consulta varchar,
+	  fecha_consulta timestamp,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  observacion varchar,
+	  FOREIGN KEY (id_tipo_consulta) REFERENCES tipo_consulta(id_tipo_consulta),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota)
+	);
+2024-04-08 20:35:51.016 -04 [28152] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:35:51.016 -04 [28152] SENTENCIA:  CREATE TABLE tratamientos (
+	  id_tratamiento integer PRIMARY KEY,
+	  duracion varchar,
+	  id_tipo_tratamiento integer,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  id_consulta varchar,
+	  observacion integer,
+	  FOREIGN KEY (id_tipo_tratamiento) REFERENCES tipo_tratamiento(id_tipo_tratamiento),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_consulta) REFERENCES consultas(id_consulta)
+	);
+2024-04-08 20:36:43.223 -04 [28152] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:36:43.223 -04 [28152] SENTENCIA:  CREATE TABLE cita (
+	  id_cita integer PRIMARY KEY,
+	  observacion varchar,
+	  id_mascota varchar,
+	  fecha_cita timestamp,
+	  id_empleado integer,
+	  fecha date,
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
+	);
+2024-04-08 20:38:01.049 -04 [28152] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:38:10.283 -04 [13280] ERROR:  no existe la relación «razas»
+2024-04-08 20:38:10.283 -04 [13280] SENTENCIA:  CREATE TABLE mascotas (
+	  id_mascota varchar PRIMARY KEY,
+	  id_propietario varchar,
+	  id_raza integer,
+	  nombre_mascota varchar,
+	  fecha_nacimiento date,
+	  FOREIGN KEY (id_propietario) REFERENCES propietarios(id_propietario),
+	  FOREIGN KEY (id_raza) REFERENCES razas(id_raza)
+	);
+2024-04-08 20:38:10.300 -04 [13280] ERROR:  no existe la relación «especie»
+2024-04-08 20:38:10.300 -04 [13280] SENTENCIA:  CREATE TABLE razas (
+	  id_raza integer PRIMARY KEY,
+	  nombre varchar,
+	  descripcion varchar,
+	  id_especie integer,
+	  FOREIGN KEY (id_especie) REFERENCES especie(id_especie)
+	);
+2024-04-08 20:38:10.322 -04 [13280] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:38:10.322 -04 [13280] SENTENCIA:  CREATE TABLE consultas (
+	  id_consulta varchar PRIMARY KEY,
+	  id_tipo_consulta varchar,
+	  fecha_consulta timestamp,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  observacion varchar,
+	  FOREIGN KEY (id_tipo_consulta) REFERENCES tipo_consulta(id_tipo_consulta),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota)
+	);
+2024-04-08 20:38:10.360 -04 [13280] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:38:10.360 -04 [13280] SENTENCIA:  CREATE TABLE tratamientos (
+	  id_tratamiento integer PRIMARY KEY,
+	  duracion varchar,
+	  id_tipo_tratamiento integer,
+	  id_empleado varchar,
+	  id_mascota varchar,
+	  id_consulta varchar,
+	  observacion integer,
+	  FOREIGN KEY (id_tipo_tratamiento) REFERENCES tipo_tratamiento(id_tipo_tratamiento),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_consulta) REFERENCES consultas(id_consulta)
+	);
+2024-04-08 20:38:12.534 -04 [13280] ERROR:  no existe la relación «mascotas»
+2024-04-08 20:38:12.534 -04 [13280] SENTENCIA:  CREATE TABLE cita (
+	  id_cita integer PRIMARY KEY,
+	  observacion varchar,
+	  id_mascota varchar,
+	  fecha_cita timestamp,
+	  id_empleado integer,
+	  fecha date,
+	  FOREIGN KEY (id_mascota) REFERENCES mascotas(id_mascota),
+	  FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
+	);
+2024-04-08 20:38:38.247 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:38:53.793 -04 [28820] LOG:  checkpoint complete: wrote 155 buffers (0.9%); 0 WAL file(s) added, 0 removed, 1 recycled; write=15.472 s, sync=0.049 s, total=15.547 s; sync files=154, longest=0.011 s, average=0.001 s; distance=1096 kB, estimate=3637 kB; lsn=0/30BF548, redo lsn=0/30BF4D8
+2024-04-08 20:42:50.145 -04 [10728] ERROR:  la relación «ciudad» ya existe
+2024-04-08 20:42:50.145 -04 [10728] SENTENCIA:  CREATE TABLE ciudad (
+	  id_ciudad integer PRIMARY KEY,
+	  nombre varchar
+	);
+2024-04-08 20:42:50.167 -04 [10728] ERROR:  la relación «tipo_documento» ya existe
+2024-04-08 20:42:50.167 -04 [10728] SENTENCIA:  CREATE TABLE tipo_documento (
+	  id_tipo_documento integer PRIMARY KEY,
+	  nombre_tipo_doc varchar
+	);
+2024-04-08 20:42:50.174 -04 [10728] ERROR:  la relación «tipo_empleado» ya existe
+2024-04-08 20:42:50.174 -04 [10728] SENTENCIA:  CREATE TABLE tipo_empleado (
+	  id_tipo_empleado varchar PRIMARY KEY,
+	  nombre_cargo integer,
+	  descripcion_cargo varchar
+	);
+2024-04-08 20:42:50.182 -04 [10728] ERROR:  la relación «permiso_empleado» ya existe
+2024-04-08 20:42:50.182 -04 [10728] SENTENCIA:  CREATE TABLE permiso_empleado (
+	  id_permiso_empleado varchar PRIMARY KEY,
+	  nombre_permiso integer,
+	  descripcion_permiso integer
+	);
+2024-04-08 20:42:50.196 -04 [10728] ERROR:  la relación «propietarios» ya existe
+2024-04-08 20:42:50.196 -04 [10728] SENTENCIA:  CREATE TABLE propietarios (
+	  id_propietario varchar PRIMARY KEY,
+	  id_mascota varchar,
+	  nombre_propietario varchar,
+	  contacto varchar,
+	  correo_electronico varchar,
+	  direccion varchar,
+	  id_ciudad integer,
+	  FOREIGN KEY (id_ciudad) REFERENCES ciudad(id_ciudad)
+	);
+2024-04-08 20:42:50.252 -04 [10728] ERROR:  la relación «empleado» ya existe
+2024-04-08 20:42:50.252 -04 [10728] SENTENCIA:  CREATE TABLE empleado (
+	  id_empleado varchar PRIMARY KEY,
+	  id_tipo_empleado varchar,
+	  nombre_empleado varchar,
+	  telefono varchar,
+	  id_permiso_empleado varchar,
+	  id_tipo_documento integer,
+	  numero_documento varchar,
+	  direccion varchar,
+	  correo_electronico varchar,
+	  id_ciudad integer,
+	  FOREIGN KEY (id_tipo_empleado) REFERENCES tipo_empleado(id_tipo_empleado),
+	  FOREIGN KEY (id_permiso_empleado) REFERENCES permiso_empleado(id_permiso_empleado),
+	  FOREIGN KEY (id_tipo_documento) REFERENCES tipo_documento(id_tipo_documento),
+	  FOREIGN KEY (id_ciudad) REFERENCES ciudad(id_ciudad)
+	);
+2024-04-08 20:42:50.278 -04 [10728] ERROR:  la relación «tipo_consulta» ya existe
+2024-04-08 20:42:50.278 -04 [10728] SENTENCIA:  CREATE TABLE tipo_consulta (
+	  id_tipo_consulta varchar PRIMARY KEY,
+	  nombre_tipo_consulta integer,
+	  descripcion varchar
+	);
+2024-04-08 20:42:50.313 -04 [10728] ERROR:  la relación «tipo_tratamiento» ya existe
+2024-04-08 20:42:50.313 -04 [10728] SENTENCIA:  CREATE TABLE tipo_tratamiento (
+	  id_tipo_tratamiento integer PRIMARY KEY,
+	  nombre varchar,
+	  descripcion varchar
+	);
+2024-04-08 20:43:38.809 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:43:47.373 -04 [28820] LOG:  checkpoint complete: wrote 78 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.503 s, sync=0.055 s, total=8.565 s; sync files=65, longest=0.018 s, average=0.001 s; distance=409 kB, estimate=3314 kB; lsn=0/31259D0, redo lsn=0/3125998
+2024-04-08 20:48:38.380 -04 [28820] LOG:  empezando checkpoint: time
+2024-04-08 20:48:42.046 -04 [28820] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.655 s, sync=0.004 s, total=3.666 s; sync files=7, longest=0.002 s, average=0.001 s; distance=109 kB, estimate=2993 kB; lsn=0/3140FE8, redo lsn=0/3140FB0
+2024-04-08 20:51:47.774 -04 [27912] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:51:47.777 -04 [10728] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:51:47.784 -04 [13280] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:51:47.787 -04 [24508] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:51:47.793 -04 [8300] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-08 20:51:47.800 -04 [22628] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:36:30.725 -04 [27712] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:36:32.105 -04 [32896] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:36:33.872 -04 [33092] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:37:04.845 -04 [12976] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:37:10.089 -04 [32804] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:37:13.426 -04 [32240] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-09 20:37:20.051 -04 [30704] WARNING:  PID 26520 is not a PostgreSQL backend process
+2024-04-09 20:37:21.762 -04 [14864] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-10 18:00:21.956 -04 [28820] LOG:  apagando
+2024-04-10 18:00:21.960 -04 [28820] LOG:  empezando checkpoint: shutdown immediate
+2024-04-10 18:00:21.990 -04 [28820] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.004 s, total=0.034 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=2694 kB; lsn=0/3141098, redo lsn=0/3141098

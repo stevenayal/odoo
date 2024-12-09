@@ -1,0 +1,6 @@
+2024-08-15 18:31:29.271 -04 [7576] LOG:  el sistema de bases de datos fue apagado en 2024-08-15 18:30:54 -04
+2024-08-15 18:32:03.025 -04 [7784] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-15 18:32:03.025 -04 [7776] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-08-15 18:32:03.030 -04 [7556] LOG:  apagando
+2024-08-15 18:32:03.031 -04 [7556] LOG:  empezando checkpoint: shutdown immediate
+2024-08-15 18:32:03.037 -04 [7556] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.008 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/4062F90, redo lsn=0/4062F90

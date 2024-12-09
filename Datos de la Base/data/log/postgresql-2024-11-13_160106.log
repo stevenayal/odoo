@@ -1,0 +1,12 @@
+2024-11-13 16:01:06.374 -03 [9652] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-10-20 12:15:51 -03
+2024-11-13 16:01:10.565 -03 [9652] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-11-13 16:01:10.796 -03 [9652] LOG:  redo comienza en 0/45DC5D8
+2024-11-13 16:01:10.797 -03 [9652] LOG:  largo de registro no válido en 0/45DC6C0: se esperaba al menos 24, se obtuvo 0
+2024-11-13 16:01:10.797 -03 [9652] LOG:  redo listo en 0/45DC688 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-11-13 16:01:10.806 -03 [9636] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-11-13 16:01:10.831 -03 [9636] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.015 s, total=0.027 s; archivos sincronizados=2, más largo=0.014 s, promedio=0.008 s; distancia=0 kB, estimación=0 kB; lsn=0/45DC6C0, lsn de redo=0/45DC6C0
+2024-11-13 19:39:53.600 -03 [13304] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-11-13 19:39:53.600 -03 [13296] ERROR:  cancelando la sentencia debido a una petición del usuario
+2024-11-13 19:39:53.605 -03 [9636] LOG:  apagando
+2024-11-13 19:39:53.607 -03 [9636] LOG:  empezando checkpoint: shutdown immediate
+2024-11-13 19:39:53.614 -03 [9636] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.009 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=0/45DC770, lsn de redo=0/45DC770

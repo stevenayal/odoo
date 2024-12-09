@@ -1,0 +1,11 @@
+2024-09-09 19:26:01.716 -04 [10272] LOG:  el sistema de bases de datos fue apagado en 2024-09-09 19:24:50 -04
+2024-09-09 19:31:01.721 -04 [10256] LOG:  empezando checkpoint: time
+2024-09-09 19:32:44.659 -04 [10256] LOG:  checkpoint completo: escritos 976 búfers (6.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=102.829 s, sync=0.105 s, total=102.940 s; archivos sincronizados=312, más largo=0.002 s, promedio=0.001 s; distancia=4563 kB, estimación=4563 kB; lsn=0/450D878, lsn de redo=0/44D88D0
+2024-09-09 19:36:01.663 -04 [10256] LOG:  empezando checkpoint: time
+2024-09-09 19:36:09.822 -04 [10256] LOG:  checkpoint completo: escritos 76 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=8.114 s, sync=0.031 s, total=8.159 s; archivos sincronizados=53, más largo=0.011 s, promedio=0.001 s; distancia=299 kB, estimación=4137 kB; lsn=0/4523798, lsn de redo=0/4523760
+2024-09-09 20:16:01.865 -04 [10256] LOG:  empezando checkpoint: time
+2024-09-09 20:16:06.246 -04 [10256] LOG:  checkpoint completo: escritos 41 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.338 s, sync=0.025 s, total=4.382 s; archivos sincronizados=52, más largo=0.002 s, promedio=0.001 s; distancia=312 kB, estimación=3754 kB; lsn=0/4586510, lsn de redo=0/4571838
+2024-09-09 20:26:01.263 -04 [10256] LOG:  empezando checkpoint: time
+2024-09-09 20:26:03.718 -04 [10256] LOG:  checkpoint completo: escritos 23 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.433 s, sync=0.007 s, total=2.455 s; archivos sincronizados=13, más largo=0.001 s, promedio=0.001 s; distancia=84 kB, estimación=3387 kB; lsn=0/45868E8, lsn de redo=0/45868B0
+2024-09-09 20:31:01.721 -04 [10256] LOG:  empezando checkpoint: time
+2024-09-09 20:31:02.784 -04 [10256] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.035 s, sync=0.013 s, total=1.063 s; archivos sincronizados=5, más largo=0.011 s, promedio=0.003 s; distancia=36 kB, estimación=3052 kB; lsn=0/458F970, lsn de redo=0/458F938

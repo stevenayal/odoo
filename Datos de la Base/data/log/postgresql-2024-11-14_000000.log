@@ -1,0 +1,4 @@
+2024-11-14 19:59:49.376 -03 [7728] LOG:  empezando checkpoint: time
+2024-11-14 19:59:49.839 -03 [7728] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.434 s, sync=0.017 s, total=0.475 s; archivos sincronizados=5, más largo=0.013 s, promedio=0.004 s; distancia=3 kB, estimación=3 kB; lsn=0/45DD7B8, lsn de redo=0/45DD780
+2024-11-14 20:17:42.562 -03 [1356] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

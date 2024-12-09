@@ -1,0 +1,2 @@
+2024-04-13 00:02:56.889 -04 [6956] LOG:  empezando checkpoint: time
+2024-04-13 00:02:56.902 -04 [6956] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.015 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/31413C8, redo lsn=0/3141390

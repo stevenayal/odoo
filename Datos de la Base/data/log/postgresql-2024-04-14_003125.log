@@ -1,0 +1,524 @@
+2024-04-14 00:31:25.451 -04 [8468] LOG:  el sistema de bases de datos fue apagado en 2024-04-14 00:30:53 -04
+2024-04-14 00:36:25.449 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-14 00:36:25.466 -04 [8452] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.018 s; sync files=2, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/3141560, redo lsn=0/3141528
+2024-04-15 20:23:08.681 -04 [2532] FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+2024-04-15 20:23:08.681 -04 [2532] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-04-15 20:23:08.751 -04 [9476] FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+2024-04-15 20:23:08.751 -04 [9476] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-04-15 20:23:08.816 -04 [24752] FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+2024-04-15 20:23:08.816 -04 [24752] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-04-15 20:23:08.878 -04 [320] FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+2024-04-15 20:23:08.878 -04 [320] DETALLE:  Connection matched file "C:/Program Files/PostgreSQL/16/data/pg_hba.conf" line 117: "host    all             all             ::1/128                 scram-sha-256"
+2024-04-15 20:26:39.281 -04 [10884] ERROR:  no existe la columna «id» referida en la llave foránea
+2024-04-15 20:26:39.281 -04 [10884] SENTENCIA:  CREATE TABLE Alumnos (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Edad INT,
+	
+	    Ciudad_de_residencia INT,
+	
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	
+	);
+	
+	
+	
+	CREATE TABLE Ciudad (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Materia (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Profesores (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Materia INT,
+	
+	    FOREIGN KEY (Materia) REFERENCES Materia(ID)
+	
+	);
+2024-04-15 20:27:22.033 -04 [22820] ERROR:  no existe la relación «ciudad»
+2024-04-15 20:27:22.033 -04 [22820] SENTENCIA:  CREATE TABLE Alumnos (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Edad INT,
+	
+	    Ciudad_de_residencia INT,
+	
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	
+	);
+	
+	
+	
+	CREATE TABLE Ciudad (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Materia (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Profesores (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Materia INT,
+	
+	    FOREIGN KEY (Materia) REFERENCES Materia(ID)
+	
+	);
+2024-04-15 20:27:29.302 -04 [20304] ERROR:  no existe la relación «ciudad»
+2024-04-15 20:27:29.302 -04 [20304] SENTENCIA:  CREATE TABLE Alumnos (
+	    ID INT PRIMARY KEY,
+	    Nombre VARCHAR(50),
+	    Apellido VARCHAR(50),
+	    Edad INT,
+	    Ciudad_de_residencia INT,
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	);
+2024-04-15 20:27:34.697 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-15 20:29:16.524 -04 [8452] LOG:  checkpoint complete: wrote 1010 buffers (6.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=101.608 s, sync=0.195 s, total=101.829 s; sync files=337, longest=0.011 s, average=0.001 s; distance=4756 kB, estimate=4756 kB; lsn=0/35E6740, redo lsn=0/35E66D0
+2024-04-15 20:45:17.099 -04 [16460] ERROR:  no existe la relación «alumnos» en carácter 119
+2024-04-15 20:45:17.099 -04 [16460] SENTENCIA:  INSERT INTO Ciudad VALUES (1, 'Ciudad1'), (2, 'Ciudad2'), (3, 'Ciudad3'), (4, 'Ciudad4'), (5,
+	'Ciudad5');
+	INSERT INTO Alumnos VALUES (1, 'Alumno1', 'Apellido1', 20, 1), (2, 'Alumno2', 'Apellido2', 21,
+	2), (3, 'Alumno3', 'Apellido3', 22, 3), (4, 'Alumno4', 'Apellido4', 23, 4), (5, 'Alumno5', 'Apellido5',
+	24, 5);
+	INSERT INTO Materias VALUES (1, 'Materia1'), (2, 'Materia2'), (3, 'Materia3'), (4, 'Materia4'), (5,
+	'Materia5');
+	INSERT INTO Profesores VALUES (1, 'Profesor1', 'Apellido1', 1), (2, 'Profesor2', 'Apellido2', 2), (3,
+	'Profesor3', 'Apellido3', 3), (4, 'Profesor4', 'Apellido4', 4), (5, 'Profesor5', 'Apellido5', 5);
+	UPDATE Alumnos SET "Edad" = 25 WHERE "ID_Alumnos" = 1;
+	DELETE FROM Alumnos WHERE "ID_Alumnos" = 1;
+	SELECT * FROM Alumnos WHERE "Edad" BETWEEN 20 AND 25;
+2024-04-15 20:45:28.053 -04 [16460] ERROR:  no existe la relación «alumnos» en carácter 13
+2024-04-15 20:45:28.053 -04 [16460] SENTENCIA:  INSERT INTO Alumnos VALUES (1, 'Alumno1', 'Apellido1', 20, 1), (2, 'Alumno2', 'Apellido2', 21,
+	2), (3, 'Alumno3', 'Apellido3', 22, 3), (4, 'Alumno4', 'Apellido4', 23, 4), (5, 'Alumno5', 'Apellido5',
+	24, 5);
+2024-04-15 20:46:05.168 -04 [5080] ERROR:  no existe la columna «ID_Ciudad» referida en la llave foránea
+2024-04-15 20:46:05.168 -04 [5080] SENTENCIA:  CREATE TABLE Alumnos (
+	 "ID_Alumnos" integer PRIMARY KEY,
+	 "Nombre_alumno" VARCHAR(100),
+	 "Apellido_alumno" VARCHAR(100),
+	 "Edad" INTEGER,
+	 "ID_Ciudad" INTEGER,
+	 FOREIGN KEY ("ID_Ciudad") REFERENCES Ciudad ("ID_Ciudad")
+	);
+2024-04-15 20:46:16.286 -04 [5080] ERROR:  error de sintaxis en o cerca de «)» en carácter 162
+2024-04-15 20:46:16.286 -04 [5080] SENTENCIA:  CREATE TABLE Alumnos (
+	 "ID_Alumnos" integer PRIMARY KEY,
+	 "Nombre_alumno" VARCHAR(100),
+	 "Apellido_alumno" VARCHAR(100),
+	 "Edad" INTEGER,
+	 "ID_Ciudad" INTEGER,
+	);
+2024-04-15 20:46:52.715 -04 [3556] ERROR:  la relación «alumnos» ya existe
+2024-04-15 20:46:52.715 -04 [3556] SENTENCIA:  CREATE TABLE Alumnos (
+	 "ID_Alumnos" integer PRIMARY KEY,
+	 "Nombre_alumno" VARCHAR(100),
+	 "Apellido_alumno" VARCHAR(100),
+	 "Edad" INTEGER,
+	 "ID_Ciudad" INTEGER
+	);
+2024-04-15 20:46:57.795 -04 [3556] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-15 20:47:10.692 -04 [16460] ERROR:  no existe la relación «materias» en carácter 13
+2024-04-15 20:47:10.692 -04 [16460] SENTENCIA:  INSERT INTO Materias VALUES (1, 'Materia1'), (2, 'Materia2'), (3, 'Materia3'), (4, 'Materia4'), (5,
+	'Materia5');
+2024-04-15 20:47:34.548 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-15 20:47:39.872 -04 [8452] LOG:  checkpoint complete: wrote 53 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.260 s, sync=0.038 s, total=5.324 s; sync files=37, longest=0.012 s, average=0.002 s; distance=171 kB, estimate=4297 kB; lsn=0/36116E0, redo lsn=0/36116A8
+2024-04-15 20:48:17.513 -04 [16308] ERROR:  no existe la relación «alumno» en carácter 15
+2024-04-15 20:48:17.513 -04 [16308] SENTENCIA:  select * from alumno;
+2024-04-15 20:49:31.421 -04 [16460] ERROR:  error de sintaxis en o cerca de «Monseñor» en carácter 189
+2024-04-15 20:49:31.421 -04 [16460] SENTENCIA:  INSERT INTO public.materia
+	(id, nombre)
+	VALUES(1, 'Matematica');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(2, 'Fisica');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(3, 'Guarani');
+	Monseñor Bogarín 284
+	esq. J. Eulogio Estigarribia
+	Asunción - Paraguay
+	educom@ucom.edu.py
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(4, 'Ingles');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(5, 'Castellano');
+	--Ciudad--
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(1, 'Asuncion');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(2, 'Lambare');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(3, 'Fernando de la Mora');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(4, 'Capiata');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(5, 'San Lorenzo');
+	--Alumnos--
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(1, 'Gustavo', 'Acosta', 41, 5);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(2, 'Juan', 'Ibarra', 31, 2);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(3, 'Gaston', 'Duarte', 39, 1);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(4, 'Steven', 'Gracia', 29, 4);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(5, 'Saulo', 'Acosta', 35, 3);
+	--Profesores--
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(1, 'Felicita', 'Dure', 1);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	Monseñor Bogarín 284
+	esq. J. Eulogio Estigarribia
+	Asunción - Paraguay
+	educom@ucom.edu.py
+	VALUES(2, 'Henry', 'Jara', 2);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(3, 'Pedro', 'Gomez', 3);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(4, 'Enrique', 'Segoviano', 4);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(5, 'Jacinto', 'Lopez', 5);
+2024-04-15 20:49:46.050 -04 [16460] ERROR:  error de sintaxis en o cerca de «Monseñor» en carácter 1224
+2024-04-15 20:49:46.050 -04 [16460] SENTENCIA:  
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(4, 'Ingles');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(5, 'Castellano');
+	--Ciudad--
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(1, 'Asuncion');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(2, 'Lambare');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(3, 'Fernando de la Mora');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(4, 'Capiata');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(5, 'San Lorenzo');
+	--Alumnos--
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(1, 'Gustavo', 'Acosta', 41, 5);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(2, 'Juan', 'Ibarra', 31, 2);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(3, 'Gaston', 'Duarte', 39, 1);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(4, 'Steven', 'Gracia', 29, 4);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(5, 'Saulo', 'Acosta', 35, 3);
+	--Profesores--
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(1, 'Felicita', 'Dure', 1);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	Monseñor Bogarín 284
+	esq. J. Eulogio Estigarribia
+	Asunción - Paraguay
+	educom@ucom.edu.py
+	VALUES(2, 'Henry', 'Jara', 2);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(3, 'Pedro', 'Gomez', 3);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(4, 'Enrique', 'Segoviano', 4);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(5, 'Jacinto', 'Lopez', 5);
+2024-04-15 20:49:54.238 -04 [16460] ERROR:  llave duplicada viola restricción de unicidad «materia_pkey»
+2024-04-15 20:49:54.238 -04 [16460] DETALLE:  Ya existe la llave (id)=(1).
+2024-04-15 20:49:54.238 -04 [16460] SENTENCIA:  
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(1, 'Matematica');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(2, 'Fisica');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(3, 'Guarani');
+	
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(4, 'Ingles');
+	INSERT INTO public.materia
+	(id, nombre)
+	VALUES(5, 'Castellano');
+	--Ciudad--
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(1, 'Asuncion');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(2, 'Lambare');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(3, 'Fernando de la Mora');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(4, 'Capiata');
+	INSERT INTO public.ciudad
+	(id, nombre)
+	VALUES(5, 'San Lorenzo');
+	--Alumnos--
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(1, 'Gustavo', 'Acosta', 41, 5);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(2, 'Juan', 'Ibarra', 31, 2);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(3, 'Gaston', 'Duarte', 39, 1);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(4, 'Steven', 'Gracia', 29, 4);
+	INSERT INTO public.alumnos
+	(id, nombre, apellido, edad, ciudad_de_residencia)
+	VALUES(5, 'Saulo', 'Acosta', 35, 3);
+	--Profesores--
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(1, 'Felicita', 'Dure', 1);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(2, 'Henry', 'Jara', 2);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(3, 'Pedro', 'Gomez', 3);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(4, 'Enrique', 'Segoviano', 4);
+	INSERT INTO public.profesores
+	(id, nombre, apellido, materia)
+	VALUES(5, 'Jacinto', 'Lopez', 5);
+2024-04-15 20:52:34.875 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-15 20:52:35.739 -04 [8452] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.815 s, sync=0.018 s, total=0.864 s; sync files=7, longest=0.012 s, average=0.003 s; distance=0 kB, estimate=3868 kB; lsn=0/3611980, redo lsn=0/3611948
+2024-04-15 20:53:06.550 -04 [16308] ERROR:  no existe la columna a.id_alumnos en carácter 8
+2024-04-15 20:53:06.550 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Alumnos».
+2024-04-15 20:53:06.550 -04 [16308] SENTENCIA:  select a.id_alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a, ciudad b
+	
+2024-04-15 20:54:36.594 -04 [16308] ERROR:  no existe la columna a.id_ciudad en carácter 106
+2024-04-15 20:54:36.594 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Ciudad».
+2024-04-15 20:54:36.594 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a 
+	inner join ciudad b on a.id_ciudad = b.id;
+2024-04-15 20:54:49.194 -04 [16308] ERROR:  no existe la columna a.id_ciudad en carácter 106
+2024-04-15 20:54:49.194 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Ciudad».
+2024-04-15 20:54:49.194 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a 
+	inner join ciudad b on a.ID_Ciudad = b.id;
+2024-04-15 20:55:10.971 -04 [16308] ERROR:  no existe la columna a.id_ciudad en carácter 106
+2024-04-15 20:55:10.971 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Ciudad».
+2024-04-15 20:55:10.971 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a 
+	inner join ciudad b on a.id_ciudad = b.id;
+2024-04-15 20:55:41.422 -04 [16308] ERROR:  no existe la columna a.id_ciudad en carácter 106
+2024-04-15 20:55:41.422 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Ciudad».
+2024-04-15 20:55:41.422 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a 
+	inner join ciudad b on a.ID_Ciudad = b.id;
+2024-04-15 20:56:47.575 -04 [16308] ERROR:  no existe la columna a.id_ciudad en carácter 105
+2024-04-15 20:56:47.575 -04 [16308] HINT:  Probablemente quiera hacer referencia a la columna «a.ID_Ciudad».
+2024-04-15 20:56:47.575 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a
+	inner join ciudad b on a.ID_Ciudad = b.id;
+2024-04-15 20:58:15.470 -04 [3884] ERROR:  no se puede eliminar tabla materia porque otros objetos dependen de él
+2024-04-15 20:58:15.470 -04 [3884] DETALLE:  restricción «profesores_materia_fkey» en tabla profesores depende de tabla materia
+2024-04-15 20:58:15.470 -04 [3884] HINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+2024-04-15 20:58:15.470 -04 [3884] SENTENCIA:  DROP TABLE IF EXISTS public.materia;
+2024-04-15 20:58:29.502 -04 [22820] ERROR:  la relación «alumnos» ya existe
+2024-04-15 20:58:29.502 -04 [22820] SENTENCIA:  CREATE TABLE Alumnos (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Edad INT,
+	
+	    Ciudad_de_residencia INT,
+	
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	
+	);
+	
+	
+	
+	CREATE TABLE Ciudad (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Materia (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50)
+	
+	);
+	
+	
+	
+	CREATE TABLE Profesores (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Materia INT,
+	
+	    FOREIGN KEY (Materia) REFERENCES Materia(ID)
+	
+	);
+2024-04-15 20:58:38.931 -04 [22820] ERROR:  la relación «alumnos» ya existe
+2024-04-15 20:58:38.931 -04 [22820] SENTENCIA:  CREATE TABLE Alumnos (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Edad INT,
+	
+	    Ciudad_de_residencia INT,
+	
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	
+	);
+2024-04-15 20:59:10.123 -04 [22820] ERROR:  no existe la relación «ciudad»
+2024-04-15 20:59:10.123 -04 [22820] SENTENCIA:  CREATE TABLE Alumnos (
+	
+	    ID INT PRIMARY KEY,
+	
+	    Nombre VARCHAR(50),
+	
+	    Apellido VARCHAR(50),
+	
+	    Edad INT,
+	
+	    Ciudad_de_residencia INT,
+	
+	    FOREIGN KEY (Ciudad_de_residencia) REFERENCES Ciudad(ID)
+	
+	);
+2024-04-15 21:00:26.181 -04 [16308] ERROR:  no existe la columna a.id_alumnos en carácter 8
+2024-04-15 21:00:26.181 -04 [16308] SENTENCIA:  select a.ID_Alumnos, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a
+	inner join ciudad b on a.ciudad_de_residencia = b.id;
+2024-04-15 21:00:40.178 -04 [16308] ERROR:  no existe la columna a.nombre_alumno en carácter 14
+2024-04-15 21:00:40.178 -04 [16308] SENTENCIA:  select a.id, a.nombre_alumno, a.apellido_alumno, b.nombre from alumnos a
+	inner join ciudad b on a.ciudad_de_residencia = b.id;
+2024-04-15 21:02:34.739 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-15 21:02:40.785 -04 [8452] LOG:  checkpoint complete: wrote 60 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.982 s, sync=0.040 s, total=6.047 s; sync files=39, longest=0.012 s, average=0.002 s; distance=245 kB, estimate=3506 kB; lsn=0/364F140, redo lsn=0/364F108
+2024-04-15 21:17:35.901 -04 [20304] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-15 21:56:08.201 -04 [12864] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-15 22:00:17.671 -04 [6920] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-15 23:29:15.920 -04 [18868] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-16 19:58:08.213 -04 [12068] ERROR:  no existe la relación «clientes» en carácter 15
+2024-04-16 19:58:08.213 -04 [12068] SENTENCIA:  select * from clientes;
+2024-04-16 19:58:16.989 -04 [15760] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-16 19:58:16.989 -04 [12268] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-16 19:59:23.967 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-16 19:59:29.982 -04 [8748] ERROR:  no existe la relación «clientes» en carácter 15
+2024-04-16 19:59:29.982 -04 [8748] SENTENCIA:  select * from clientes;
+2024-04-16 19:59:37.248 -04 [8748] ERROR:  no existe la relación «clientes» en carácter 15
+2024-04-16 19:59:37.248 -04 [8748] SENTENCIA:  select * from Clientes;
+2024-04-16 20:01:04.530 -04 [8452] LOG:  checkpoint complete: wrote 995 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=100.311 s, sync=0.233 s, total=100.564 s; sync files=325, longest=0.003 s, average=0.001 s; distance=4692 kB, estimate=4692 kB; lsn=0/3AE4258, redo lsn=0/3AE4220
+2024-04-16 20:03:24.877 -04 [19944] ERROR:  no existe la relación «public.clientes» en carácter 15
+2024-04-16 20:03:24.877 -04 [19944] SENTENCIA:  select * from public.clientes;
+2024-04-16 20:03:31.344 -04 [19944] ERROR:  no existe la relación «public.clientes» en carácter 15
+2024-04-16 20:03:31.344 -04 [19944] SENTENCIA:  select * from public.Clientes;
+2024-04-16 20:03:44.503 -04 [19944] ERROR:  error de sintaxis en o cerca de «'Clientes'» en carácter 22
+2024-04-16 20:03:44.503 -04 [19944] SENTENCIA:  select * from public.'Clientes';

@@ -1,0 +1,6 @@
+2024-12-04 20:40:20.504 -03 [6524] LOG:  empezando checkpoint: time
+2024-12-04 20:40:21.305 -03 [6524] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.776 s, sync=0.016 s, total=0.812 s; archivos sincronizados=8, más largo=0.011 s, promedio=0.002 s; distancia=16 kB, estimación=4368 kB; lsn=0/70F96A0, lsn de redo=0/70F9668
+2024-12-08 17:25:30.579 -03 [6524] LOG:  empezando checkpoint: time
+2024-12-08 17:25:30.938 -03 [6524] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.326 s, sync=0.014 s, total=0.360 s; archivos sincronizados=4, más largo=0.012 s, promedio=0.004 s; distancia=9 kB, estimación=3932 kB; lsn=0/70FBC00, lsn de redo=0/70FBBC8
+2024-12-08 20:40:31.236 -03 [6524] LOG:  empezando checkpoint: time
+2024-12-08 20:40:31.487 -03 [6524] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.218 s, sync=0.014 s, total=0.251 s; archivos sincronizados=3, más largo=0.012 s, promedio=0.005 s; distancia=3 kB, estimación=3539 kB; lsn=0/70FCA80, lsn de redo=0/70FCA48

@@ -1,0 +1,61 @@
+2024-04-22 20:14:12.676 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:15:51.620 -04 [8452] LOG:  checkpoint complete: wrote 983 buffers (6.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=98.797 s, sync=0.137 s, total=98.949 s; sync files=305, longest=0.027 s, average=0.001 s; distance=4563 kB, estimate=4679 kB; lsn=0/3F58F98, redo lsn=0/3F58F28
+2024-04-22 20:19:12.632 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:19:12.862 -04 [8452] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.202 s, sync=0.012 s, total=0.231 s; sync files=1, longest=0.012 s, average=0.012 s; distance=10 kB, estimate=4212 kB; lsn=0/3F5B920, redo lsn=0/3F5B8E8
+2024-04-22 20:24:12.862 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:24:20.979 -04 [8452] LOG:  checkpoint complete: wrote 81 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.067 s, sync=0.033 s, total=8.118 s; sync files=65, longest=0.011 s, average=0.001 s; distance=314 kB, estimate=3822 kB; lsn=0/3FAA2F0, redo lsn=0/3FAA2B8
+2024-04-22 20:41:31.818 -04 [28336] ERROR:  no se puede eliminar tabla productos porque otros objetos dependen de él
+2024-04-22 20:41:31.818 -04 [28336] DETALLE:  restricción «inventario_producto_id_fkey» en tabla inventario depende de tabla productos
+	restricción «detalles_ventas_producto_id_fkey» en tabla detalles_ventas depende de tabla productos
+2024-04-22 20:41:31.818 -04 [28336] HINT:  Use DROP ... CASCADE para eliminar además los objetos dependientes.
+2024-04-22 20:41:31.818 -04 [28336] SENTENCIA:  drop table PRODUCTOS;
+2024-04-22 20:44:03.206 -04 [28336] ERROR:  no existe la relación «productos»
+2024-04-22 20:44:03.206 -04 [28336] SENTENCIA:  CREATE TABLE INVENTARIO (
+	    INVENTARIO_ID SERIAL PRIMARY KEY,
+	    PRODUCTO_ID INT,
+	    CANTIDAD INT,
+	    FOREIGN KEY (PRODUCTO_ID) REFERENCES PRODUCTOS(PRODUCTO_ID)
+	);
+2024-04-22 20:44:12.981 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:44:13.643 -04 [28336] ERROR:  la relación «ventas» ya existe
+2024-04-22 20:44:13.643 -04 [28336] SENTENCIA:  CREATE TABLE VENTAS (
+	    VENTA_ID SERIAL PRIMARY KEY,
+	    FECHA DATE,
+	    CLIENTE_ID INT,
+	    FOREIGN KEY (CLIENTE_ID) REFERENCES CLIENTES(CLIENTE_ID)
+	);
+2024-04-22 20:44:17.861 -04 [8452] LOG:  checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.841 s, sync=0.022 s, total=4.880 s; sync files=46, longest=0.002 s, average=0.001 s; distance=256 kB, estimate=3466 kB; lsn=0/3FF9BD8, redo lsn=0/3FEA650
+2024-04-22 20:49:12.862 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:49:19.274 -04 [8452] LOG:  checkpoint complete: wrote 64 buffers (0.4%); 0 WAL file(s) added, 0 removed, 1 recycled; write=6.359 s, sync=0.032 s, total=6.412 s; sync files=51, longest=0.011 s, average=0.001 s; distance=318 kB, estimate=3151 kB; lsn=0/404B338, redo lsn=0/403A1F0
+2024-04-22 20:59:12.275 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 20:59:14.106 -04 [8452] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.810 s, sync=0.004 s, total=1.831 s; sync files=8, longest=0.001 s, average=0.001 s; distance=68 kB, estimate=2843 kB; lsn=0/404B498, redo lsn=0/404B460
+2024-04-22 21:14:12.106 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 21:14:16.094 -04 [8452] LOG:  checkpoint complete: wrote 40 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.940 s, sync=0.025 s, total=3.989 s; sync files=31, longest=0.011 s, average=0.001 s; distance=30 kB, estimate=2561 kB; lsn=0/4052FA0, redo lsn=0/4052F68
+2024-04-22 21:16:06.276 -04 [7372] ERROR:  no existe la columna «id» en carácter 28
+2024-04-22 21:16:06.276 -04 [7372] SENTENCIA:  DELETE FROM CLIENTES WHERE ID IN (1,2);
+2024-04-22 21:16:25.814 -04 [7372] ERROR:  update o delete en «clientes» viola la llave foránea «ventas_cliente_id_fkey» en la tabla «ventas»
+2024-04-22 21:16:25.814 -04 [7372] DETALLE:  La llave (cliente_id)=(1) todavía es referida desde la tabla «ventas».
+2024-04-22 21:16:25.814 -04 [7372] SENTENCIA:  DELETE FROM CLIENTES A WHERE A.CLIENTE_ID IN (1,2);
+2024-04-22 21:17:16.184 -04 [7372] ERROR:  update o delete en «clientes» viola la llave foránea «ventas_cliente_id_fkey» en la tabla «ventas»
+2024-04-22 21:17:16.184 -04 [7372] DETALLE:  La llave (cliente_id)=(1) todavía es referida desde la tabla «ventas».
+2024-04-22 21:17:16.184 -04 [7372] SENTENCIA:  DELETE FROM CLIENTES A WHERE A.CLIENTE_ID IN (1,2);
+	
+2024-04-22 21:19:12.096 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 21:19:13.352 -04 [8452] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.224 s, sync=0.017 s, total=1.257 s; sync files=9, longest=0.012 s, average=0.002 s; distance=21 kB, estimate=2307 kB; lsn=0/4058680, redo lsn=0/4058648
+2024-04-22 21:24:12.353 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 21:24:12.776 -04 [8452] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.404 s, sync=0.004 s, total=0.424 s; sync files=5, longest=0.002 s, average=0.001 s; distance=2 kB, estimate=2077 kB; lsn=0/4059028, redo lsn=0/4058FF0
+2024-04-22 21:28:59.588 -04 [29548] ERROR:  llave duplicada viola restricción de unicidad «clientes_pkey»
+2024-04-22 21:28:59.588 -04 [29548] DETALLE:  Ya existe la llave (cliente_id)=(3).
+2024-04-22 21:28:59.588 -04 [29548] SENTENCIA:  INSERT INTO CLIENTES (CLIENTE_ID, NOMBRE, DIRECCION, TELEFONO, EDAD)
+	VALUES
+	    (3, 'JUAN SOSA', 'YPANE BARRIO SAN VALENTIN', '0961666999', 30),
+	    (4, 'JOSE KUEBLER', 'CAPIATA KM 18', '0972300500', 35),
+	    (5, 'MIKE TYSON', 'VILLA MORRA A 100 METROS DEL BANCO CONTINENTAL', '0981200500', 45);
+2024-04-22 21:29:12.776 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 21:29:13.316 -04 [8452] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.506 s, sync=0.016 s, total=0.540 s; sync files=6, longest=0.012 s, average=0.003 s; distance=29 kB, estimate=1872 kB; lsn=0/4060558, redo lsn=0/4060520
+2024-04-22 21:34:12.316 -04 [8452] LOG:  empezando checkpoint: time
+2024-04-22 21:34:12.439 -04 [8452] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.103 s, sync=0.003 s, total=0.123 s; sync files=2, longest=0.002 s, average=0.002 s; distance=1 kB, estimate=1685 kB; lsn=0/4060A00, redo lsn=0/40609C8
+2024-04-28 16:43:47.910 -04 [12236] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-04-28 16:43:47.915 -04 [3052] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
